@@ -1,4 +1,6 @@
-# customer-contracts
+# customer-contracts 
+
+#### Created by Bhagyashri Bhutada
 
 This is coding excercise for Homify. This is a Java REST server I created using below technologies:
 
