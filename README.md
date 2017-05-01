@@ -9,7 +9,8 @@ This is coding excercise for Homify. This is a Java REST server I created using 
 
 Also, I have used in-memory database as mentioned in the task. 
 
-Folder structure:
+## Folder structure:
+
 1] com.customer.contracts 
    - It contains controller (with REST endpoints) and main application class.
 2] com.customer.contracts.models
