@@ -2,10 +2,10 @@
 
 This is coding excercise for Homify. This is a Java REST server I created using below technologies:
 
-1] Springboot - Used this because its easy to build web application and its easy to integrate with Spring eco system
-2] Maven - Great for managing dependencies and building tool.
-3] Jsonpath - For managing JSON objects
-4] Java 8 
+#### 1] Springboot - Used this because its easy to build web application and its easy to integrate with Spring eco system
+#### 2] Maven - Great for managing dependencies and building tool.
+#### 3] Jsonpath - For managing JSON objects
+#### 4] Java 8 
 
 Also, I have used in-memory database as mentioned in the task. 
 
