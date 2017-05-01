@@ -1,3 +1,9 @@
+/*
+ * This is the RestController class which exposes 5 REST endpoints as required. Most of the methods are self explanatory and 
+ * uses mock database to perform CRUS operation. In real world the mock database can be replaced with any database/JPA.
+ * 
+ * All the REST endpoints check whether the body/inputs are correct else an appropriate error message is sent back.
+ * */
 package com.cutomer.contracts;
 
 import java.io.IOException;
@@ -85,6 +91,9 @@ public class CustomerServiceController {
 		return sumOfRevenues;
 	}
 
+	/*
+	 * This method is used for exception handling ex. bad request
+	 * */
 	@ExceptionHandler({ IllegalArgumentException.class, NullPointerException.class })
 	void handleBadRequests(HttpServletResponse response) throws IOException {
 		response.sendError(HttpStatus.BAD_REQUEST.value());

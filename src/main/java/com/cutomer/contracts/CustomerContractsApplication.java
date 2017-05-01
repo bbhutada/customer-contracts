@@ -1,3 +1,6 @@
+/*
+ * Main class which starts the Spring application
+ * */
 package com.cutomer.contracts;
 
 import org.springframework.boot.SpringApplication;

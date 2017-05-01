@@ -1,3 +1,8 @@
+/*
+ * This is the in memory database POJO. It stores contracts and customers in a MAP. 
+ * The reason to use MAP is for faster iteration by keys which results in O(1) complexity just to find record by ID
+ * This object is a singleton object and has API's exposed for CRUD operation a expose few key API's used by controller
+ * */
 package com.cutomer.contracts.repository;
 
 import java.util.ArrayList;
@@ -13,7 +18,9 @@ public class DbRepository {
 	private Map<Long, Contract> contractsRepo = new HashMap<>();
 	private Map<Long, Customer> customersRepo = new HashMap<>();
 
-	
+	/*
+	 * Returns List of Contract by customer Id
+	 * */
 	public List<Contract> getContractsByCustomerId(Long customerId) {
 		List<Contract> customerContracts = new ArrayList<Contract>();
 		
@@ -38,6 +45,9 @@ public class DbRepository {
 		return customersRepo.get(customerId);
 	}
 
+	/*
+	 * Returns a Customer with all of its contracts
+	 * */
 	public Customer getCustomerByIdWithContracts(Long customerId) {
 		Customer customer = this.getCustomerById(customerId);
 		if(customer == null) {
