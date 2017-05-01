@@ -7,7 +7,7 @@ This is coding excercise for Homify. This is a Java REST server I created using 
 #### 3] Jsonpath - For managing JSON objects
 #### 4] Java 8 
 
-Also, I have used POJO as in-memory database per mentioned in the task. 
+Also, I have used POJO as in-memory database per mentioned in the task and used MAP to store customer/contracts data. The reason for using MAP is for faster searching of record (complexity O(1)).
 
 ## Folder structure:
 
@@ -32,6 +32,9 @@ The application has below REST endpoints as mentioned in the coding challenge bu
         "id" : <record Id>
     }
     
+    Error handling:
+    1] Throws ad Request 400 error if any of the input fields are missing
+    
  ## 2] POST <Host>/customerservice/contract
      This API is used to create a contract and associate it to a particular customer
     an example POST body is as below:
@@ -41,7 +44,8 @@ The application has below REST endpoints as mentioned in the coding challenge bu
      {"id": <contract Id>, "customerId":<customerId>, "monthlyRevenue": 22.5, "startDate":"2017-05-01T16:05:07.765Z", "type":"loanType"}
      
      Eror Handling:
-     1] If "customerId" does not exist then HTTP response 400 is sent along with message "Customer ID does not exist"
+     1] If "customerId" does not exist then HTTP error response is sent along with message "Customer ID does not exist"
+    2] Throws ad Request 400 error if any of the input fields are missing
      
      
  ## 3] GET <host>/customerservice/customer/{customerId}    
