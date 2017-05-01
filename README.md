@@ -11,11 +11,11 @@ Also, I have used in-memory database as mentioned in the task.
 
 ## Folder structure:
 
-1] com.customer.contracts 
+### 1] com.customer.contracts 
    - It contains controller (with REST endpoints) and main application class.
-2] com.customer.contracts.models
+### 2] com.customer.contracts.models
    - It contains Customer and Contract model POJO's
-3] com.customer.contracts.repository
+### 3] com.customer.contracts.repository
    - It contains a in-memory mock database class which has API methods for CRUD operations and are consumed via controller methods.
 
 The application has below REST endpoints as mentioned in the coding challenge but with few error corrections:
